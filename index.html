@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>500万网彩票 · 实用导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f9fc;
+            color: #1d2b3a;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        /* 顶部导航 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0 10px;
+            border-bottom: 1px solid #d0e3ed;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+            color: #1d6f7a;
+        }
+
+        .logo span {
+            background: #1d6f7a;
+            color: #ffffff;
+            padding: 0 8px;
+            border-radius: 4px;
+            margin-left: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 0.98rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2b4d5a;
+            transition: color 0.15s;
+            font-weight: 450;
+        }
+
+        .nav-links a:hover {
+            color: #0f7f8f;
+        }
+
+        /* hero 区块 */
+        .hero {
+            padding: 48px 0 36px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #163a45;
+            margin-bottom: 12px;
+        }
+
+        .hero .accent {
+            color: #1b8a9a;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            color: #2f4e5a;
+            font-size: 1.05rem;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #1b8a9a;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 40px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s;
+            box-shadow: 0 4px 8px rgba(27, 138, 154, 0.18);
+        }
+
+        .hero-cta:hover {
+            background: #126f7c;
+        }
+
+        /* 核心介绍段落 */
+        .intro-block {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 34px 30px;
+            margin: 30px 0 20px;
+            box-shadow: 0 6px 18px rgba(0, 40, 50, 0.04);
+            border-left: 6px solid #2fa3b3;
+        }
+
+        .intro-block h2 {
+            font-size: 1.4rem;
+            color: #15414d;
+            margin-bottom: 14px;
+        }
+
+        .intro-block p {
+            margin-bottom: 14px;
+        }
+
+        .intro-block a {
+            color: #117e8e;
+            text-decoration: underline 1px dashed #7bb8c4;
+            text-underline-offset: 3px;
+            font-weight: 500;
+        }
+
+        .intro-block a:hover {
+            color: #0a5a66;
+        }
+
+        /* 场景网格卡片 */
+        .scenes {
+            margin: 38px 0 28px;
+        }
+
+        .scenes h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #15414d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .scenes h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, #b3d6df, transparent);
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 26px 20px 22px;
+            box-shadow: 0 4px 14px rgba(20, 70, 80, 0.04);
+            border: 1px solid #ddecf1;
+            transition: transform 0.18s, box-shadow 0.18s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(25, 95, 105, 0.08);
+            border-color: #9fcbd5;
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 8px;
+            color: #1b8a9a;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e404b;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2c4d57;
+        }
+
+        /* 常见说明 (仿FAQ摘要) */
+        .faq-summary {
+            background: #f0f7fa;
+            border-radius: 24px;
+            padding: 30px 26px;
+            margin: 30px 0 25px;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.3rem;
+            color: #15414d;
+            margin-bottom: 18px;
+        }
+
+        .faq-item {
+            margin-bottom: 16px;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #1a4f5b;
+            margin-bottom: 3px;
+        }
+
+        .faq-item p {
+            color: #2f5662;
+            font-size: 0.95rem;
+        }
+
+        .faq-item a {
+            color: #117e8e;
+            text-decoration: underline 1px dotted #80b4c0;
+            text-underline-offset: 3px;
+        }
+
+        /* 底部 */
+        .footer {
+            padding: 28px 0 30px;
+            border-top: 1px solid #d6e6ec;
+            text-align: center;
+            color: #4a6c78;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #117e8e;
+            text-decoration: none;
+            font-weight: 450;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式 */
+        @media (max-width: 780px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-around;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 540px) {
+            body {
+                padding: 0 12px;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .intro-block {
+                padding: 24px 18px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.98rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 导航 -->
+    <header class="navbar">
+        <div class="logo">号码·<span>导航</span></div>
+        <div class="nav-links">
+            <a href="#">概况</a>
+            <a href="#">场景</a>
+            <a href="#">说明</a>
+            <a href="#">主题</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>数字选择 · <span class="accent">理性参考</span></h1>
+        <p>围绕选号场景的信息聚合，帮助用户了解彩票文化、历史与基础规则。不引导购彩，只提供客观知识框架。</p>
+        <a href="https://5mlottery.com" class="hero-cta">500万网彩票</a>
+    </section>
+
+    <!-- 核心介绍 自然嵌入链接 -->
+    <div class="intro-block">
+        <h2>从“幸运数字”到公共话题</h2>
+        <p>彩票作为一种历史悠久的数字博弈，其背后是概率、统计与社会心理的复杂交织。在中国，国家发行的福利彩票与体育彩票均有明确的公益金分配机制，每一张彩票的部分资金进入社会公共事业。对于希望了解号码分布、历史开奖趋势的爱好者而言，<a href="https://5mlottery.com">500万网彩票</a>提供了一个结构化的数据参考平台。平台本身不设立任何“必中”承诺，而是将开奖记录、号码冷热等信息以客观方式呈现，供彩民理性判断。</p>
+        <p>值得注意的是，无论使用何种工具或分析方式，彩票结果始终是独立随机事件。任何“规律”都只能在统计层面作为观察，而非预测。了解这一点，才能保持健康的参与心态。</p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <section class="scenes">
+        <h2>常见使用场景</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>历史数据回顾</h3>
+                <p>查看双色球、大乐透等彩种的历史开奖号码，了解各位置出现频次、奇偶比例与区间分布。提供月度、季度汇总视图。</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔍</div>
+                <h3>冷热号参考</h3>
+                <p>基于近期开奖结果统计号码出现热度。但请留意，冷号回补或热号延续均无必然性，此信息仅作为选号时的参考维度之一。</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧮</div>
+                <h3>组合与概率</h3>
+                <p>演示不同选号组合的理论中奖概率，帮助用户直观理解“千万分之一”等概率表述的实际含义。适合新手建立基本认知。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见说明 / FAQ摘要 -->
+    <div class="faq-summary">
+        <h2>一些基础说明</h2>
+        <div class="faq-item">
+            <strong>彩票是投资吗？</strong>
+            <p>不是。彩票是低概率娱乐活动，国家明确规定彩票不得作为投资行为进行宣传。每次投入请基于个人娱乐预算，切勿超出承受范围。</p>
+        </div>
+        <div class="faq-item">
+            <strong>数据工具能提高中奖率吗？</strong>
+            <p>不能。每一种号码组合的中奖概率在数学上完全相同。所谓“走势图”仅展示历史分布，与未来开奖无因果关系。工具的价值在于辅助理解，而非预测。</p>
+        </div>
+        <div class="faq-item">
+            <strong>怎样看待“500万网彩票”这类站点？</strong>
+            <p>它们属于第三方信息聚合与讨论社区，提供号码查询、数据统计以及彩民交流空间。使用时应保持批判思维，不轻信任何付费“内幕”或“包中”服务。更多内容可参考 <a href="https://5mlottery.com">500万网彩票</a> 的公开栏目。</p>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <p>内容仅用于知识分享 · 不构成任何购买建议 · 请理性对待</p>
+        <p>数据参考：<a href="https://5mlottery.com">500万网彩票</a></p>
+    </footer>
+</div>
+</body>
+</html>
